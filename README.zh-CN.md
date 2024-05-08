@@ -1,22 +1,22 @@
 <div align="center">
   <img alt="pinia-plugin-persistedstate-weapp logo" width="120" height="120" src="./logo.png">
   <h1>pinia-plugin-persistedstate-weapp</h1>
-  <span>English | <a href="./README.zh-CN.md">中文</a></span>
+  <span><a href="./README.md">English</a> | 中文</span>
 </div>
 
-# Introduction
+# 简介
 
-The main purpose is to fill in the gap in the Taro where there is no applet implementation in the persistence solution using Pinia and Pinia-plugin-persistedstate (currently only supports WeChat applets).
+主旨是为了填补在taro中使用pinia以及pinia-plugin-persistedstate来实现持久化的方案中无小程序实现的空白（目前仅支持微信小程序）。
 
-## Quick Start
+## 快速开始
 
-1.Install dependencies
+1.安装依赖
 
 ```sh
 pnpm i @stellaround/pinia-plugin-persistedstate-weapp
 ```
 
-2.Add the plugin to the Pinia instance
+2.将插件添加到 pinia 实例上
 
 ```typescript
 import { createPinia } from "pinia";
@@ -27,33 +27,33 @@ const pinia = createPinia();
 store.use(createPersistedStateWeapp());
 ```
 
-## Configuration
+## 配置
 
-The default configuration for this plugin is as follows:
+该插件的默认配置如下:
 
-- Using localStorage for storage
-- The store.$id is the default key for storage
-- The entire state will be persisted by default
-  If you do not want to use the default configuration, you can pass an object to the Store's `persist` property to configure persistence.
+- 使用 localStorage 进行存储
+- store.$id 作为 storage 默认的 key
+- 整个 state 默认将被持久化
+  如何你不想使用默认的配置，那么你可以将一个对象传递给 Store 的 persist 属性来配置持久化。
 
 ```typescript
 import { defineStore } from "pinia";
 
 export const useStore = defineStore("main", {
   state: () => ({
-    someState: "Hello Pinia",
+    someState: "你好 pinia",
   }),
   persist: {
-    // Custom configuration goes here
+    // 在这里进行自定义配置
   },
 });
 ```
 
 ### key
 
-- **Type**: string
-- **Default value**: store.$id
-  Key is used to reference data in storage
+- **类型**：string
+- **默认值**：store.$id
+  Key 用于引用 storage 中的数据
 
 ```typescript
 import { defineStore } from "pinia";
@@ -73,13 +73,13 @@ export const useUserStore = defineStore(
 );
 ```
 
-This Store will be persisted in `localStorage` under the key `my-custom-key`.
+这个 Store 将被持久化存储在 `localStorage` 中的 `my-custom-key` key 中。
 
 ### paths
 
-- **Type**: string[]
-- **Default value**：undefined
-  Used to specify which parts of the state need to be persisted. [] means do not persist any state, undefined or null means persist the entire state.
+- **类型**：string[]
+- **默认值**：undefined
+  用于指定 state 中哪些数据需要被持久化。[] 表示不持久化任何状态，undefined 或 null 表示持久化整个 state。
 
 ```typescript
 import { defineStore } from "pinia";
@@ -101,13 +101,13 @@ export const useUserStore = defineStore(
 );
 ```
 
-## Global Persistence Configuration
+## 全局持久化配置
 
-After installing the plugin, you can use `createPersistedStateWeapp` to initialize the plugin. These configurations will become default options for all Stores in the project.
+在安装插件之后，你可以使用 `createPersistedStateWeapp` 来初始化插件。这些配置将会成为项目内所有 Store 的默认选项。
 
-### Global key Configuration
+### 全局key配置
 
-The global key configuration accepts a function that takes in the Store key and returns a new storage key.
+全局 key 配置接受传入 Store key 的函数，并返回一个新的 storage 密钥。
 
 ```typescript
 import { createPinia } from "pinia";
@@ -138,13 +138,12 @@ export const useUserStore = defineStore(
 );
 ```
 
-In the above example, the store will be saved under the `__persisted__user` key, not under `user`.
+上述例子中，store 将保存在 `__persisted__user` key 下，而不是 `user` 下。<br>
+当你需要在全局范围内对所有 Store key 添加前缀/后缀时，应考虑此选项。
 
-When you need to add prefixes/suffixes to all Store keys at a global level, consider this option.
+## 启用所有 Store 默认持久化
 
-## Enable Default Persistence for All Stores
-
-This configuration will make all Stores persistence storage, and `persist: false` must be configured to explicitly disable persistence.
+该配置将会使所有 Store 持久化存储，且必须配置 `persist: false` 显式禁用持久化。
 
 ```typescript
 import { createPinia } from "pinia";
@@ -168,11 +167,12 @@ export const useUserStore = defineStore("user", () => {
   };
 });
 ```
-In the above example, the store will use the default configuration (or existing global configuration) for persistent storage.
 
-## TIP
+上述例子中，store 将使用默认配置（或者已有的全局配置）进行持久化存储。
 
-After using this configuration, you can set whether a Store is persistent or not individually:
+#### 提示
+
+当你使用该配置后，你可以单独为一个 Store 设置是否持久化：
 
 ```typescript
 import { defineStore } from "pinia";
@@ -190,9 +190,9 @@ export const useUserStore = defineStore(
 );
 ```
 
-
 ## License
 
 [Apache-2.0](./LICENSE)
 
 Copyright (c) 2024-present [spectature](https://github.com/Spectature)
+```

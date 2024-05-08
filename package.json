@@ -1,0 +1,14 @@
+{
+  "name": "pinia-plugin-persistedstate-weapp",
+  "version": "1.0.0",
+  "description": "Configurable persistence of Pinia stores for weapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "spectateur",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
