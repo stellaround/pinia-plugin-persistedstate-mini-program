@@ -1,5 +1,5 @@
 {
-  "name": "pinia-plugin-persistedstate-weapp",
+  "name": "@stellaround/pinia-plugin-persistedstate-weapp",
   "version": "1.0.0",
   "description": "Configurable persistence of Pinia stores for weapp",
   "main": "index.js",
