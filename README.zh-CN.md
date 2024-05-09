@@ -1,6 +1,6 @@
 <div align="center">
-  <img alt="pinia-plugin-persistedstate-weapp logo" width="120" height="120" src="./logo.png">
-  <h1>pinia-plugin-persistedstate-weapp</h1>
+  <img alt="pinia-plugin-persistedstate-mini-program logo" width="120" height="120" src="./logo.png">
+  <h1>pinia-plugin-persistedstate-mini-program</h1>
   <span><a href="./README.md">English</a> | 中文</span>
 </div>
 
@@ -13,14 +13,14 @@
 1.安装依赖
 
 ```sh
-pnpm i @stellaround/pinia-plugin-persistedstate-weapp
+pnpm i @stellaround/pinia-plugin-persistedstate-mini-program
 ```
 
 2.将插件添加到 pinia 实例上
 
 ```typescript
 import { createPinia } from "pinia";
-import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-weapp";
+import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-mini-program";
 
 const pinia = createPinia();
 
@@ -111,7 +111,7 @@ export const useUserStore = defineStore(
 
 ```typescript
 import { createPinia } from "pinia";
-import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-weapp";
+import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-mini-program";
 
 const pinia = createPinia();
 
@@ -147,7 +147,7 @@ export const useUserStore = defineStore(
 
 ```typescript
 import { createPinia } from "pinia";
-import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-weapp";
+import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-mini-program";
 
 const pinia = createPinia();
 

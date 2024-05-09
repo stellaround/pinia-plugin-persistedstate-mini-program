@@ -1,6 +1,6 @@
 <div align="center">
-  <img alt="pinia-plugin-persistedstate-weapp logo" width="120" height="120" src="./logo.png">
-  <h1>pinia-plugin-persistedstate-weapp</h1>
+  <img alt="pinia-plugin-persistedstate-mini-program logo" width="120" height="120" src="./logo.png">
+  <h1>pinia-plugin-persistedstate-mini-program</h1>
   <span>English | <a href="./README.zh-CN.md">中文</a></span>
 </div>
 
@@ -13,14 +13,14 @@ The main purpose is to fill in the gap in the Taro where there is no applet impl
 1.Install dependencies
 
 ```sh
-pnpm i @stellaround/pinia-plugin-persistedstate-weapp
+pnpm i @stellaround/pinia-plugin-persistedstate-mini-program
 ```
 
 2.Add the plugin to the Pinia instance
 
 ```typescript
 import { createPinia } from "pinia";
-import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-weapp";
+import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-mini-program";
 
 const pinia = createPinia();
 
@@ -111,7 +111,7 @@ The global key configuration accepts a function that takes in the Store key and 
 
 ```typescript
 import { createPinia } from "pinia";
-import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-weapp";
+import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-mini-program";
 
 const pinia = createPinia();
 
@@ -148,7 +148,7 @@ This configuration will make all Stores persistence storage, and `persist: false
 
 ```typescript
 import { createPinia } from "pinia";
-import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-weapp";
+import { createPersistedStateWeapp } from "@stellaround/pinia-plugin-persistedstate-mini-program";
 
 const pinia = createPinia();
 
