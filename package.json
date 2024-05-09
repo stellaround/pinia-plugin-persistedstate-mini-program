@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "Configurable persistence of Pinia stores for mini-program",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
   },
   "author": "spectateur",
   "license": "Apache-2.0",
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "@types/wechat-miniprogram": "^3.4.7",
+    "pinia": "^2.1.7",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   }
 }
